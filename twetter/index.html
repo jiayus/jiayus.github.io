@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            height: 2200px;
+            background:url("dust_scratches.png");
+        }
+        a{
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+            background-color: white;
+            z-index: 99;
+        }
+        .left {
+            float: left;
+            
+        }
+
+        .right {
+            float: right;
+        }
+        .navlink{
+            line-height: 50px;
+            margin: 0 15px;
+            font-size: 13px;
+            color: rgb(102, 117, 127);
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .searchbox{
+            border-radius: 15px;
+
+        }
+
+        .clearfix {
+            clear: both;
+        }
+        i.fa-twitter {
+            font-size: 19px;
+            color: #1DA1F2;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .pic1 {
+            
+            height: 100vh;
+            overflow: hidden;
+            background: url("7b51.jpg");
+            background-size: cover;
+            background-position: 0 30%;
+
+        }
+       
+        .navbar2 {
+            position: sticky;
+            top:50px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+            background-color: antiquewhite;
+            
+        }
+        .navbar2 .container{
+            position: relative;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border: 5px solid white;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: -50px;
+        }
+        .cat{
+            height: 100%;
+        }
+      
+        .navbar2 .leftbox{
+            float: left;
+            margin-left: 300px;
+    
+        }
+        .navbar2 .leftbox .nav2link {
+            margin-top: -5px;
+            display:inline-block;
+            float: left;
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            color: rgb(102, 117, 127);
+        
+      }
+      .nav2link:hover{
+        border-bottom: 2px solid #0084B4;
+        
+      }
+        .nav2link span{
+           font-size: 20px;
+        }
+      
+        .rsearchbox{
+            margin-top: 15px;
+            width: 101px;
+            height: 32px;
+            border: 2px solid #0084B4;
+            border-radius: 15px;
+            float:right;
+            text-align: center;
+            
+            
+        }  
+        .rsearchbox .rs{
+            padding-top: 6px;
+            font-size: 14px;
+            line-height: 32px;
+            color:#0084B4;
+         
+        } 
+
+
+
+    </style>
+</head>
+
+<body>
+    <nav class=navbar>
+        <div class=container>
+            <div class=left>
+                <a class=navlink href="＃"><i class="fab fa-twitter"></i>首頁</a>
+                <a class=navlink href="＃">關於</a>
+            </div>
+            <div class=right>
+                 <input class="searchbox" type="text">
+                <a class=navlink href="＃">已經擁有帳戶？登入</a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </nav>
+
+    <div class="pic1"></div>
+   
+
+
+    <nav class=navbar2>
+        <div class="container">
+                <div class="box">
+                        <img class=cat src="max.jpg" alt=""></div>
+            <div class="leftbox">
+                <div class=nav2link><a href="">推文<br><span>2311</span></a></div>
+                <div class=nav2link><a href="">正在跟隨<br><span>6411</span></a></div>
+                <div class=nav2link><a href="">跟隨者<br><span>3241</span></a></div>
+                <div class=nav2link><a href="">喜歡的內容<br><span>641</span></a></div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="rightbox">
+                <div class=rsearchbox><span class=rs>跟隨</span></div> 
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        </nav>
+
+</body>
+
+</html>
