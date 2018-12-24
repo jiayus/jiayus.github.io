@@ -1,55 +1,355 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>giraffe</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <style>
-        body,
-        html {
-            height: 100%;
+        * {
+            box-sizing: border-box;
         }
 
-        .parallax {
-            /* The image used */
-            background-image: url("6901_0.jpg");
+        body {
+            margin: 0;
+        }
 
-            /* Full height */
-            height: 100%;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-            /* Create the parallax scrolling effect */
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
+        .clearfix {
+            clear: both;
+        }
+
+        /* 最上方的選單，目前無任何功用 */
+        #sub_nav {
+            border-top: 13px solid #ff4b43;
+        }
+
+
+        /* 背景圖片選單 */
+        #bg_banner {
+            height: 90vh;
+            background-image: url('https://animals.sandiegozoo.org/sites/default/files/2016-11/animals_hero_giraffe_1_0.jpg');
             background-size: cover;
+            background-position-y: 55%;
+            background-attachment: fixed;
         }
 
-        .text01 {
-            height: 300px;
-            background-color:rgba(74, 175, 237, 0.5);
+        #bg_banner .container {
+            height: 90vh;
+            position: relative;
+        }
+
+        #bg_banner .title {
+            margin: 0;
+            position: absolute;
+            top: 30%;
+            color: white;
+            font-size: 30px;
+            line-height: 75px;
+            letter-spacing: 15px;
+            text-shadow: 2px 2px 2px #1b738e;
+            padding: 10px 25px;
+        }
+
+        /* 主要選單 */
+        #main_nav {
+            /* position: sticky; */
+            top: 0;
+            left: 0;
+            background-color: #ff4b43;
+        }
+
+        #main_nav a.nav_link {
+            color: white;
+            font-family: 'Noto Sans TC', sans-serif;
+            letter-spacing:2px;
+            text-decoration: none;
+            display: block;
+            padding: 10px 20px;
+            float: left;
+        }
+
+        
+
+        /*區塊3*/
+        #section_3 {
+            background-color: white;
+            padding: 80px 0;
+        }
+
+        #section_3 .left_box {
+            float: left;
+            width: 33.33%;
+            padding: 0 20px;
+            line-height: 26px;　
+            overflow: hidden;
             
-
         }
-        .text0101{
-          
-          font-size: 31px;
-          text-align: center;
+        #section_3 .left_box h1{
+            letter-spacing:1.3px;
+            
+        }
+        
+        #section_3 .left_box img {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+        }
+
+       
+
+        /*區塊4*/
+        #section_4 {
+            background-color: #82ba61;
+            padding: 80px 0;
+            color: white;
+        }
+
+        #section_4 h1 {
+            text-align: center;
+            letter-spacing:2px;
+        }
+
+        #section_4 p {
+            -webkit-column-count: 3;
+            /* Chrome, Safari, Opera */
+            -moz-column-count: 3;
+            /* Firefox */
+            column-count: 3;
+
+            -webkit-column-gap: 40px;
+            /* Chrome, Safari, Opera */
+            -moz-column-gap: 40px;
+            /* Firefox */
+            column-gap: 40px;
+            line-height: 32px;　
+        }
+
+        /*區塊5*/
+        #section_5 {
+            height: 60vh;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Cumulus_Clouds_over_Yellow_Prairie2.jpg/1200px-Cumulus_Clouds_over_Yellow_Prairie2.jpg');
+            background-size: cover;
+            background-position-y: 65%;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        #section_5 .overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.0.1);
+            transition: 2.3s;
+        }
+
+        #section_5 .overlay h1 {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 70px;
+            letter-spacing:2px;
+            opacity: 1;
+            transition: 1.3s;
+        }
+
+        #section_5 .overlay:hover {
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        #section_5 .overlay:hover h1 {
+            opacity: 0.5;
+        }
+
+        /*區塊6*/
+        #section_6 h1 {
+            text-align: center;
+        }
+
+        #section_6 .left_box {
+            float: left;
+            width: 50%;
+            height: 70vh;
+            background-image: url('http://webneel.com/daily/sites/default/files/images/daily/09-2013/5-giraffe-wildlife-photography.jpg');
+            background-position-y: 14%;
+            background-size: cover;
+            color: white;
+            padding: 150px 60px;
+        }
+
+        #section_6 .right_box {
+            float: left;
+            width: 50%;
+            height: 70vh;
+            background-image: url('https://i-h1.pinimg.com/564x/bd/bc/ff/bdbcff210e42b0d172e9c3cdd926a301.jpg');
+            background-size: cover;
+            background-position-y: 69%;
+            padding: 150px 60px;
+            color: white;
+        }
+        #section_7 {
+            background-color: white;
+            padding: 80px 0;
+        }
+
+        #section_7 .left_box {
+            float: left;
+            width: 50%;
+            height: 560px;
+            padding: 0 20px;
+            overflow: hidden;
+        }
+
+        #section_7 .left_box img {
+            width: 100%;
+           margin-top:-50px; 
+        }
+        #section_7 .left_box h3 {
+            color: #ad8353;
+        }
+
+
+        /*footer*/
+        footer {
+            font-size: 12px;
+            background-color:#ff4b43;
+            color: #ffa8a4;
+            padding: 8px 0;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
+    <!-- 版面最上方的nav-->
+    <nav id="sub_nav"></nav>
 
-    <div class="parallax"></div>
+    <!-- 背景圖片+parallax -->
+    <section id="bg_banner">
+        <div class="container">
+            <h1 class="title">
+                即將成為美麗的傳說？
+            </h1>
+        </div>
+    </section>
 
-    <div class=text01>
-        <span class=tese0101>Scroll Up and Down this page to see the parallax scrolling effect.
-            This div is just here to enable scrolling.
-            Tip: Try to remove the background-attachment property to remove the scrolling effect.</span>
+    <!-- 主要選單+position:sticky -->
+    <nav id="main_nav">
+        <div class="container">
+            <a class="nav_link" href="#section_3">近期新聞</a>
+            <a class="nav_link" href="#section_4">關於長頸鹿</a>
+            <a class="nav_link" href="#section_5">長頸鹿の迷思</a>
+            <a class="nav_link" href="#section_7">如何保護長頸鹿</a>
+            <div class="clearfix"></div>
+        </div>
+    </nav>
+    <section id="section_3">
+        <div class="container">
+            <div class="left_box">
+                <img src="https://7.share.photo.xuite.net/chung_lion883/178f646/12772243/644446899_m.jpg"
+                    alt="">
+                    <h1 >長頸鹿瀕危<br>英國保育人員高科技監測</h1>
+                    <h4>2018-12-18</h4>
+                    <p>
+                    以後連長頸鹿都只能從博物館的標本區看到了嗎？
+                    國際自然保護聯盟近期將長頸鹿科爾多凡亞種列為「極度瀕危物種」名單，顯示全球長頸鹿數量岌岌可危。對此，英國布里斯托爾動物園學會（Bristol Zoological Society）的野生保育及技術負責人麥卡蓓接受《路透》（Reuters）訪問時表示，長頸鹿的總數量現存僅約8萬隻，甚至比非洲象還要少2至3萬隻。
+                    為深入了解此種長頸鹿的數量及生存方式，布里斯托爾動物園學會以紅外線式相機及無人機等高科技方式，識別身分並計算總量。麥卡蓓認為，若再不做出實際行動、開始好好保存這些區域，有生之年，人類將親眼目睹長頸鹿科爾多凡亞種的滅絕。
+                </p>
+            </div>
+            <div class="left_box">
+                <img src="https://img.mplus.com.tw/images/article/1474507552_cc_giraffee-shot_16x9.jpg"
+                    alt="">
+                    
+                 <h1 >肯亞長頸鹿遭盜獵瀕危<br>三十年銳減四成</h1>
+                <h4>2018-12-11</h4>
+                <p>
+                    東非國家肯亞擁有豐富的野生動物和自然景觀，是生態旅遊的熱門地點。但是肯亞政府最近提出一項警訊，表示當地的長頸鹿數量、在過去30年減少了大約四成。肯亞野生生物管理署代理署長慕斯優奇表示：「我們在過去30年，長頸鹿數量銳減4成。特別是羅氏長頸鹿，我們只剩下659隻。」肯亞當局表示，長頸鹿數量銳減，與多重因素有關。首先氣候變遷造成長期乾旱，帶來新的疾病，不利長頸鹿生存；其次戰亂與衝突，導致長頸鹿遭到獵殺成為食物來源；此外人類濫墾濫伐，入侵野生動物棲地，則使長頸鹿的生存空間大幅流失。遊客們得知肯亞長頸鹿陷入極度瀕危，感到十分痛心。
 
-    </div>
+                </p>
+            </div>
+            <div class="left_box">
+                <img src="https://cms.exmoo.com/uploads/2018-12-05/0AbJX8gg4vIsgsVTw1gg.jpg"
+                alt="">
+                <h1 >兩品種全球只剩4000多隻<br>首列為極危</h1>
+                
+                <h4>2018-12-05</h4>
+                <p>
+                    ABS-CBN報道指，兩種極危長頸鹿分別為科爾多凡（Kordofan）以及努比亞（Nubian）的品種，在野外總共只剩下4000多隻。這意味着，只差一個階段牠們就會跌入滅絕邊緣。<br>此外，尚比亞長頸鹿（Thornicrofts）和西非長頸鹿（West African giraffes）亦列為「脆弱」；羅特希爾德長頸鹿（Rothschild）則是「接近受威脅」。
+                </p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
 
-    <div class="parallax"></div>
+    <section id="section_4">
+        <div class="container">
+            <h1>關於長頸鹿</h1>
+            <p>長頸鹿屬（學名：Giraffa）是一屬生長在非洲的反芻偶蹄動物，共有四個物種，是現存世界上最高的陸生動物。一般雄性個體高達4.8到5.5公尺高，重達900公斤。雌性個體一般要小一些。
+                長頸鹿是非洲特有的動物，與鹿和牛有親緣關係，但屬於不同的科，即長頸鹿科。長頸鹿科包括長頸鹿和霍加狓兩種動物。
+                中國典籍關於長頸鹿的記載，最早出自晉代李石所著《續博物志》，記錄非洲索馬利亞沿岸撥拔力古國出產的異獸，身高一丈余頸長九尺。宋代趙汝適著《諸蕃志》中稱非洲長頸鹿為徂蠟：「狀如駝馳，而大如牛，色黃，前腳高五尺，後低三尺，頭高向上。」明朝永樂十二年（1414），時值鄭和第四次出海，榜葛次國（今孟加拉）使臣將一隻長頸鹿進貢給明成祖，以「麒麟」為名，據說乃東非土語中的長頸鹿名稱giri之音譯；在中國傳說中，麒麟為祥瑞之獸，明成祖便將其視為祥瑞之兆，命人撰文並繪圖記錄，以此標榜自己施政的偉大。存世的圖像記錄僅有傳沈度所繪的《麒麟圖》。該典故流傳甚廣。長頸鹿在日語及韓語中的名稱皆源於麒麟（日語：キリン），在閩南話中也稱為「麒麟鹿」。
+                </p>
+        </div>
+    </section>
 
+
+    <section id="section_5">
+        <div class="overlay">
+            <h1>長頸鹿的迷思</h1>
+        </div>
+    </section>
+
+
+    <section id="section_6">
+        <div class="left_box">
+            <h1>深信可以治療愛滋病</h1>
+            <p>當地居民迷信食用長頸鹿的腦組織及骨髓，可以使愛滋病患恢復健康。
+
+            </p>
+        </div>
+        <div class="right_box">
+            <h1>盜獵者割尾巴賣作嫁妝</h1>
+            <p>不多不少，就是要牠們的尾巴，就為了尾巴，殺了一隻長頸鹿。
+
+                </p>
+        </div>
+        <div class="clearfix"></div>
+    </section>
+    <section id="section_7">
+        <div class="container">
+            <div class="left_box">
+                <img src="https://i-h1.pinimg.com/564x/f8/cb/00/f8cb00f0f374072a2b627847b49c4238.jpg" alt="">
+            </div>
+            <div class="left_box">
+                <h1>如何保護長頸鹿</h1>
+                <h3>好消息：非洲國家對長頸鹿的保育意識逐漸抬頭</h3>
+                <p>
+                截至2017年8月，尼日是非洲地區唯一替長頸鹿制定全國性保育策略的國家，在當地社區的參與下，保育計畫推動地相當成功，讓一個小族群在不到30年的時間，族群量增加了8倍。另外，境內有3種長頸鹿亞種的肯亞，其全國性長頸鹿保育策略的建立正進入最後階段，有望讓羅氏長頸鹿在肯亞和烏干達皆受到保護。此外，南非許多國家在尚未制定任何官方保育策略的情況下，長頸鹿在私人公園的業主之間移交和出售的情形，也已成功地保留了當地的長頸鹿種原。最終希望尼日的成功案例可以為長頸鹿保育樹立榜樣，讓更多國家關心它們的命運。長頸鹿依然面臨許多挑戰，包括政治動盪、人口壓力和適宜棲息的環境越來越少。
+                </p>
+                <h3>身為地球公民，我可以做什麼？</h3>
+                <p>
+                    拒絕購買由長頸鹿（身體部位或器官）製成的任何產品，無論是裝飾品、習俗儀式的用品或是藥品等。<br>
+                    如果你能負擔得起，支持生態旅遊，讓你的孩子有機會在野外看到這些美好的動物。包括在尼日、衣索比亞、肯亞、坦尚尼亞、尚比亞和南非等國的生態旅遊，都能見到各種不同的長頸鹿亞種。<br>
+                    如果你特別關心長頸鹿的命運，也可以捐錢給參與保護的基金會或是告訴你的朋友長頸鹿遇到的威脅。
+                </p>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            Copyright © 2018 jia_yu Inc. 保留一切權利。
+        </div>
+    </footer>
 </body>
 
 </html>
